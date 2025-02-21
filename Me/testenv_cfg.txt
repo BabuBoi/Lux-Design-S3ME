@@ -1,0 +1,12 @@
+env_cfg:{
+    "max_units": 16,
+    "match_count_per_episode": 5,
+    "max_steps_in_match": 100,
+    "map_height": 24,
+    "map_width": 24,
+    "num_teams": 2,
+    "unit_move_cost": 1,
+    "unit_sap_cost": 32,
+    "unit_sap_range": 6,
+    "unit_sensor_range": 3
+}

@@ -55,6 +55,8 @@ if __name__ == "__main__":
         if i == 0:
             env_cfg = raw_input["info"]["env_cfg"]
             player_id = raw_input["player"]
+            #with open('log.txt', 'a') as f:
+                #f.write(f"env_cfg:{json.dumps(env_cfg, indent=4)}")
         i += 1
         actions = agent_fn(observation, dict(env_cfg=env_cfg))
         # send actions to engine
