@@ -49,6 +49,11 @@ class Agent():
         for unit_id in available_unit_ids:
             unit_pos = unit_positions[unit_id]
             unit_energy = unit_energys[unit_id]
+            with open("debug.txt", "a") as f:
+                f.write(f"unit_id: {unit_id}, unit_pos: {unit_pos}, unit_energy: {unit_energy}\n")
+                f.write(f"step: {step}, team_points: {team_points}\n")
+                f.write(f"relic_nodes: {observed_relic_node_positions}\n")
+                f.write(f"relic_nodes_mask: {observed_relic_nodes_mask}\n")
             if len(self.relic_node_positions) > 0:
                 nearest_relic_node_position = self.relic_node_positions[0]
                 manhattan_distance = abs(unit_pos[0] - nearest_relic_node_position[0]) + abs(unit_pos[1] - nearest_relic_node_position[1])
